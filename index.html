@@ -1200,6 +1200,14 @@ $ages
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "id"       "age"      "diabetes" "status"  </code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb127"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb127-1"><a href=""></a><span class="fu">nrow</span>(df)    <span class="co"># Количество строк (наблюдений)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb129"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb129-1"><a href=""></a><span class="fu">ncol</span>(df)    <span class="co"># Количество столбцов (переменных)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
 </div>
 </div>
 </div></div>
@@ -1211,8 +1219,8 @@ $ages
 <div class="fragment">
 <p>Столбцы можно выбирать по индексу</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb127"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb127-1"><a href=""></a><span class="co"># Первый столбец - возвращается data.frame</span></span>
-<span id="cb127-2"><a href=""></a>df[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb131"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb131-1"><a href=""></a><span class="co"># Первый столбец - возвращается data.frame</span></span>
+<span id="cb131-2"><a href=""></a>df[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id
 1  1
@@ -1220,8 +1228,13 @@ $ages
 3  3
 4  4</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb129"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb129-1"><a href=""></a><span class="co"># Выбираем первые три столбца </span></span>
-<span id="cb129-2"><a href=""></a>df[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb133"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb133-1"><a href=""></a><span class="co"># Первый столбец - возвращается вектор</span></span>
+<span id="cb133-2"><a href=""></a>df[,<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 3 4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb135"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb135-1"><a href=""></a><span class="co"># Выбираем первые три столбца </span></span>
+<span id="cb135-2"><a href=""></a>df[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id age diabetes
 1  1  25    Type1
@@ -1235,18 +1248,18 @@ $ages
 <div class="fragment">
 <p>И по имени</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb131"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb131-1"><a href=""></a><span class="co"># Столбец id - возвращается вектор</span></span>
-<span id="cb131-2"><a href=""></a>df<span class="sc">$</span>id </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb137"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb137-1"><a href=""></a><span class="co"># Столбец id - возвращается вектор</span></span>
+<span id="cb137-2"><a href=""></a>df<span class="sc">$</span>id </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 2 3 4</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb133"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb133-1"><a href=""></a><span class="co"># Доступ к элементу как в векторе</span></span>
-<span id="cb133-2"><a href=""></a>df<span class="sc">$</span>id[<span class="dv">2</span>] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb139"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb139-1"><a href=""></a><span class="co"># Доступ к элементу как в векторе</span></span>
+<span id="cb139-2"><a href=""></a>df<span class="sc">$</span>id[<span class="dv">2</span>] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb135"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb135-1"><a href=""></a><span class="co"># Выбор по списку столбцов</span></span>
-<span id="cb135-2"><a href=""></a>df[<span class="fu">c</span>(<span class="st">"id"</span>, <span class="st">"age"</span>, <span class="st">"diabetes"</span>)] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb141"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb141-1"><a href=""></a><span class="co"># Выбор по списку столбцов</span></span>
+<span id="cb141-2"><a href=""></a>df[<span class="fu">c</span>(<span class="st">"id"</span>, <span class="st">"age"</span>, <span class="st">"diabetes"</span>)] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id age diabetes
 1  1  25    Type1
@@ -1265,22 +1278,22 @@ $ages
 <div class="fragment">
 <p>Строки можно выбирать по индексу</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb137"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb137-1"><a href=""></a><span class="co"># Первая строка</span></span>
-<span id="cb137-2"><a href=""></a>df[<span class="dv">1</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb143"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb143-1"><a href=""></a><span class="co"># Первая строка</span></span>
+<span id="cb143-2"><a href=""></a>df[<span class="dv">1</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id age diabetes status
 1  1  25    Type1   Poor</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb139"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb139-1"><a href=""></a><span class="co"># Первые три строки</span></span>
-<span id="cb139-2"><a href=""></a>df[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, ] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb145"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb145-1"><a href=""></a><span class="co"># Первые три строки</span></span>
+<span id="cb145-2"><a href=""></a>df[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, ] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id age diabetes    status
 1  1  25    Type1      Poor
 2  2  34    Type2  Improved
 3  3  28    Type1 Excellent</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb141"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb141-1"><a href=""></a><span class="co"># Определеный столбец для строк</span></span>
-<span id="cb141-2"><a href=""></a>df[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, ]<span class="sc">$</span>age </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb147"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb147-1"><a href=""></a><span class="co"># Определеный столбец для строк</span></span>
+<span id="cb147-2"><a href=""></a>df[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, ]<span class="sc">$</span>age </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 25 34 28</code></pre>
 </div>
@@ -1290,20 +1303,20 @@ $ages
 <div class="fragment">
 <p>И по условию на значение</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb143"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb143-1"><a href=""></a><span class="co"># По условию для столбца</span></span>
-<span id="cb143-2"><a href=""></a>df[df<span class="sc">$</span>age <span class="sc">&gt;</span> <span class="dv">30</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb149"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb149-1"><a href=""></a><span class="co"># По условию для столбца</span></span>
+<span id="cb149-2"><a href=""></a>df[df<span class="sc">$</span>age <span class="sc">&gt;</span> <span class="dv">30</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id age diabetes   status
 2  2  34    Type2 Improved
 4  4  52    Type1     Poor</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb145"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb145-1"><a href=""></a><span class="co"># По условию с выбором столбца</span></span>
-<span id="cb145-2"><a href=""></a>df[df<span class="sc">$</span>age <span class="sc">&gt;</span> <span class="dv">30</span>,]<span class="sc">$</span>age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb151"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb151-1"><a href=""></a><span class="co"># По условию с выбором столбца</span></span>
+<span id="cb151-2"><a href=""></a>df[df<span class="sc">$</span>age <span class="sc">&gt;</span> <span class="dv">30</span>,]<span class="sc">$</span>age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 34 52</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb147"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb147-1"><a href=""></a><span class="co"># По условию с выбором столбцов</span></span>
-<span id="cb147-2"><a href=""></a>df[df<span class="sc">$</span>age <span class="sc">&gt;</span> <span class="dv">30</span>, <span class="fu">c</span>(<span class="st">"id"</span>, <span class="st">"age"</span>)] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb153"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb153-1"><a href=""></a><span class="co"># По условию с выбором столбцов</span></span>
+<span id="cb153-2"><a href=""></a>df[df<span class="sc">$</span>age <span class="sc">&gt;</span> <span class="dv">30</span>, <span class="fu">c</span>(<span class="st">"id"</span>, <span class="st">"age"</span>)] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id age
 2  2  34
@@ -1315,7 +1328,7 @@ $ages
 <div class="fragment">
 <p>Более удобная форма записи с помощью <code>subset()</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb149"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb149-1"><a href=""></a><span class="fu">subset</span>(df, age <span class="sc">&lt;</span> <span class="dv">35</span>, <span class="fu">c</span>(<span class="st">"id"</span>, <span class="st">"age"</span>, <span class="st">"status"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb155"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb155-1"><a href=""></a><span class="fu">subset</span>(df, age <span class="sc">&lt;</span> <span class="dv">35</span>, <span class="fu">c</span>(<span class="st">"id"</span>, <span class="st">"age"</span>, <span class="st">"status"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id age    status
 1  1  25      Poor
@@ -1332,8 +1345,8 @@ $ages
 <div class="fragment">
 <p>Добавить новый столбец можно присвоив ему значение</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb151"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb151-1"><a href=""></a>df<span class="sc">$</span>sex <span class="ot">&lt;-</span> <span class="st">"male"</span></span>
-<span id="cb151-2"><a href=""></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb157"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb157-1"><a href=""></a>df<span class="sc">$</span>sex <span class="ot">&lt;-</span> <span class="st">"male"</span></span>
+<span id="cb157-2"><a href=""></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id age diabetes    status  sex
 1  1  25    Type1      Poor male
@@ -1341,9 +1354,9 @@ $ages
 3  3  28    Type1 Excellent male
 4  4  52    Type1      Poor male</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb153"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb153-1"><a href=""></a><span class="co"># Аналогично можно очистить столбец</span></span>
-<span id="cb153-2"><a href=""></a>df<span class="sc">$</span>sex <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb153-3"><a href=""></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb159"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb159-1"><a href=""></a><span class="co"># Аналогично можно очистить столбец</span></span>
+<span id="cb159-2"><a href=""></a>df<span class="sc">$</span>sex <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb159-3"><a href=""></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id age diabetes    status sex
 1  1  25    Type1      Poor  NA
@@ -1351,9 +1364,9 @@ $ages
 3  3  28    Type1 Excellent  NA
 4  4  52    Type1      Poor  NA</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb155"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb155-1"><a href=""></a><span class="co"># И совсем удалить</span></span>
-<span id="cb155-2"><a href=""></a>df<span class="sc">$</span>sex <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb155-3"><a href=""></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb161"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb161-1"><a href=""></a><span class="co"># И совсем удалить</span></span>
+<span id="cb161-2"><a href=""></a>df<span class="sc">$</span>sex <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb161-3"><a href=""></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id age diabetes    status
 1  1  25    Type1      Poor
@@ -1367,11 +1380,11 @@ $ages
 <div class="fragment">
 <p>А можно с помощью функции <code>cbind()</code>. Обычно используется, когда нужно “дописать” к таблице другую таблицу.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb157"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb157-1"><a href=""></a>df2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>( </span>
-<span id="cb157-2"><a href=""></a>  <span class="at">sex =</span> <span class="fu">c</span>(<span class="st">"male"</span>, <span class="st">"female"</span>),</span>
-<span id="cb157-3"><a href=""></a>  <span class="at">val =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">0</span>)</span>
-<span id="cb157-4"><a href=""></a>)</span>
-<span id="cb157-5"><a href=""></a><span class="fu">cbind</span>(df, df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb163"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb163-1"><a href=""></a>df2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>( </span>
+<span id="cb163-2"><a href=""></a>  <span class="at">sex =</span> <span class="fu">c</span>(<span class="st">"male"</span>, <span class="st">"female"</span>),</span>
+<span id="cb163-3"><a href=""></a>  <span class="at">val =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">0</span>)</span>
+<span id="cb163-4"><a href=""></a>)</span>
+<span id="cb163-5"><a href=""></a><span class="fu">cbind</span>(df, df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id age diabetes    status    sex val
 1  1  25    Type1      Poor   male   1
@@ -1389,8 +1402,8 @@ $ages
 <p>Для добавления новых строк используется <code>rbind()</code>.</p>
 <p>Для корректного добавления новых строк в дата-фрейм нужно, чтобы количество, тип и порядок столбцов совпадали.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb159"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb159-1"><a href=""></a>df2 <span class="ot">&lt;-</span> df</span>
-<span id="cb159-2"><a href=""></a><span class="fu">rbind</span>(df, df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb165"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb165-1"><a href=""></a>df2 <span class="ot">&lt;-</span> df</span>
+<span id="cb165-2"><a href=""></a><span class="fu">rbind</span>(df, df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id age diabetes    status
 1  1  25    Type1      Poor
@@ -1415,7 +1428,7 @@ $ages
 <p><strong>Фактор</strong> (factor) - качественный тип данных, который представляет собой фиксированный упорядоченный набор значений. Этот тип данных удобно использовать для анализа и визуализации, поскольку он занимает меньше места в памяти и сохраняет порядок.</p>
 </div>
 <div class="fragment">
-<div class="sourceCode" id="cb161"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb161-1"><a href=""></a><span class="fu">factor</span>(<span class="at">x =</span> <span class="fu">character</span>(), levels, labels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb167"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb167-1"><a href=""></a><span class="fu">factor</span>(<span class="at">x =</span> <span class="fu">character</span>(), levels, labels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li class="fragment"><code>x</code> - значения, которые может принимать фактор</li>
 <li class="fragment"><code>levels</code> - уровни - числовые значения, которые используются для сортировки</li>
@@ -1425,7 +1438,7 @@ $ages
 <div class="fragment">
 <p>Для упрощения работы с факторами используется пакет <a href="https://forcats.tidyverse.org">forcats</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb162"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb162-1"><a href=""></a><span class="fu">library</span>(forcats)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb168"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb168-1"><a href=""></a><span class="fu">library</span>(forcats)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
@@ -1445,10 +1458,10 @@ $ages
 <h2>Сравнение фактора с вектором</h2>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb163"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb163-1"><a href=""></a><span class="co"># Определим вектор с названиями месяцев</span></span>
-<span id="cb163-2"><a href=""></a>month_v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Январь"</span>, <span class="st">"Февраль"</span>, <span class="st">"Март"</span>, <span class="st">"Апрель"</span>, <span class="st">"Май"</span>, <span class="st">"Июнь"</span>, <span class="st">"Июль"</span>, <span class="st">"Август"</span>, </span>
-<span id="cb163-3"><a href=""></a>             <span class="st">"Сентябрь"</span>, <span class="st">"Октябрь"</span>, <span class="st">"Ноябрь"</span>, <span class="st">"Декабрь"</span>)</span>
-<span id="cb163-4"><a href=""></a><span class="fu">sort</span>(month_v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb169"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb169-1"><a href=""></a><span class="co"># Определим вектор с названиями месяцев</span></span>
+<span id="cb169-2"><a href=""></a>month_v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Январь"</span>, <span class="st">"Февраль"</span>, <span class="st">"Март"</span>, <span class="st">"Апрель"</span>, <span class="st">"Май"</span>, <span class="st">"Июнь"</span>, <span class="st">"Июль"</span>, <span class="st">"Август"</span>, </span>
+<span id="cb169-3"><a href=""></a>             <span class="st">"Сентябрь"</span>, <span class="st">"Октябрь"</span>, <span class="st">"Ноябрь"</span>, <span class="st">"Декабрь"</span>)</span>
+<span id="cb169-4"><a href=""></a><span class="fu">sort</span>(month_v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Август"   "Апрель"   "Декабрь"  "Июль"     "Июнь"    
  [6] "Май"      "Март"     "Ноябрь"   "Октябрь"  "Сентябрь"
@@ -1458,15 +1471,15 @@ $ages
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb165"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb165-1"><a href=""></a><span class="co"># Определим фактор с названиями месяцев</span></span>
-<span id="cb165-2"><a href=""></a>month_f <span class="ot">&lt;-</span> <span class="fu">factor</span>(month_v, <span class="at">levels =</span> month_v)</span>
-<span id="cb165-3"><a href=""></a><span class="fu">sort</span>(month_f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb171"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb171-1"><a href=""></a><span class="co"># Определим фактор с названиями месяцев</span></span>
+<span id="cb171-2"><a href=""></a>month_f <span class="ot">&lt;-</span> <span class="fu">factor</span>(month_v, <span class="at">levels =</span> month_v)</span>
+<span id="cb171-3"><a href=""></a><span class="fu">sort</span>(month_f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] Январь   Февраль  Март     Апрель   Май      Июнь    
  [7] Июль     Август   Сентябрь Октябрь  Ноябрь   Декабрь 
 12 Levels: Январь Февраль Март Апрель Май Июнь ... Декабрь</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb167"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb167-1"><a href=""></a><span class="fu">sort</span>(month_f, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb173"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb173-1"><a href=""></a><span class="fu">sort</span>(month_f, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] Декабрь  Ноябрь   Октябрь  Сентябрь Август   Июль    
  [7] Июнь     Май      Апрель   Март     Февраль  Январь  
@@ -1481,8 +1494,8 @@ $ages
 <div class="column" style="width:46%;">
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb169"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb169-1"><a href=""></a>df <span class="ot">&lt;-</span> airquality</span>
-<span id="cb169-2"><a href=""></a><span class="fu">head</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb175"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb175-1"><a href=""></a>df <span class="ot">&lt;-</span> airquality</span>
+<span id="cb175-2"><a href=""></a><span class="fu">head</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Ozone Solar.R Wind Temp Month Day
 1    41     190  7.4   67     5   1
@@ -1492,14 +1505,14 @@ $ages
 5    NA      NA 14.3   56     5   5
 6    28      NA 14.9   66     5   6</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb171"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb171-1"><a href=""></a><span class="fu">unique</span>(df<span class="sc">$</span>Month)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb177"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb177-1"><a href=""></a><span class="fu">unique</span>(df<span class="sc">$</span>Month)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5 6 7 8 9</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb173"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb173-1"><a href=""></a><span class="co"># Создадим столбец с названием месяца</span></span>
-<span id="cb173-2"><a href=""></a>df<span class="sc">$</span>MonthName <span class="ot">&lt;-</span> <span class="fu">factor</span>(month_v[df<span class="sc">$</span>Month])</span>
-<span id="cb173-3"><a href=""></a><span class="co"># Проверим структуру таблицы</span></span>
-<span id="cb173-4"><a href=""></a><span class="fu">str</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb179"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb179-1"><a href=""></a><span class="co"># Создадим столбец с названием месяца</span></span>
+<span id="cb179-2"><a href=""></a>df<span class="sc">$</span>MonthName <span class="ot">&lt;-</span> <span class="fu">factor</span>(month_v[df<span class="sc">$</span>Month])</span>
+<span id="cb179-3"><a href=""></a><span class="co"># Проверим структуру таблицы</span></span>
+<span id="cb179-4"><a href=""></a><span class="fu">str</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>'data.frame':   153 obs. of  7 variables:
  $ Ozone    : int  41 36 12 18 NA 28 23 19 8 NA ...
@@ -1515,29 +1528,29 @@ $ages
 </div><div class="column" style="width:54%;">
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb175"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb175-1"><a href=""></a><span class="co"># Посчитаем количество записей для каждого месяца</span></span>
-<span id="cb175-2"><a href=""></a><span class="fu">table</span>(df<span class="sc">$</span>MonthName)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb181"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb181-1"><a href=""></a><span class="co"># Посчитаем количество записей для каждого месяца</span></span>
+<span id="cb181-2"><a href=""></a><span class="fu">table</span>(df<span class="sc">$</span>MonthName)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
   Август     Июль     Июнь      Май Сентябрь 
       31       31       30       31       30 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb177"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb177-1"><a href=""></a><span class="co"># Проверим, какие есть уровни у фактора</span></span>
-<span id="cb177-2"><a href=""></a><span class="fu">levels</span>(df<span class="sc">$</span>MonthName)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb183"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb183-1"><a href=""></a><span class="co"># Проверим, какие есть уровни у фактора</span></span>
+<span id="cb183-2"><a href=""></a><span class="fu">levels</span>(df<span class="sc">$</span>MonthName)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Август"   "Июль"     "Июнь"     "Май"      "Сентябрь"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb179"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb179-1"><a href=""></a><span class="co"># Расширим уровни до полного списка </span></span>
-<span id="cb179-2"><a href=""></a>df<span class="sc">$</span>MonthName <span class="ot">&lt;-</span> <span class="fu">fct_expand</span>(df<span class="sc">$</span>MonthName, month_v)</span>
-<span id="cb179-3"><a href=""></a><span class="fu">levels</span>(df<span class="sc">$</span>MonthName)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb185"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb185-1"><a href=""></a><span class="co"># Расширим уровни до полного списка </span></span>
+<span id="cb185-2"><a href=""></a>df<span class="sc">$</span>MonthName <span class="ot">&lt;-</span> <span class="fu">fct_expand</span>(df<span class="sc">$</span>MonthName, month_v)</span>
+<span id="cb185-3"><a href=""></a><span class="fu">levels</span>(df<span class="sc">$</span>MonthName)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Август"   "Июль"     "Июнь"     "Май"      "Сентябрь"
  [6] "Январь"   "Февраль"  "Март"     "Апрель"   "Октябрь" 
 [11] "Ноябрь"   "Декабрь" </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb181"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb181-1"><a href=""></a><span class="co"># Переопределим сортировку уровней</span></span>
-<span id="cb181-2"><a href=""></a>df<span class="sc">$</span>MonthName <span class="ot">&lt;-</span> <span class="fu">fct_relevel</span>(df<span class="sc">$</span>MonthName, month_v)</span>
-<span id="cb181-3"><a href=""></a><span class="fu">levels</span>(df<span class="sc">$</span>MonthName)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb187"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb187-1"><a href=""></a><span class="co"># Переопределим сортировку уровней</span></span>
+<span id="cb187-2"><a href=""></a>df<span class="sc">$</span>MonthName <span class="ot">&lt;-</span> <span class="fu">fct_relevel</span>(df<span class="sc">$</span>MonthName, month_v)</span>
+<span id="cb187-3"><a href=""></a><span class="fu">levels</span>(df<span class="sc">$</span>MonthName)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Январь"   "Февраль"  "Март"     "Апрель"   "Май"     
  [6] "Июнь"     "Июль"     "Август"   "Сентябрь" "Октябрь" 
@@ -1553,8 +1566,8 @@ $ages
 <div class="column" style="width:55%;">
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb183"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb183-1"><a href=""></a><span class="co"># Проверим структуру таблицы</span></span>
-<span id="cb183-2"><a href=""></a><span class="fu">str</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb189"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb189-1"><a href=""></a><span class="co"># Проверим структуру таблицы</span></span>
+<span id="cb189-2"><a href=""></a><span class="fu">str</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>'data.frame':   153 obs. of  7 variables:
  $ Ozone    : int  41 36 12 18 NA 28 23 19 8 NA ...
@@ -1565,8 +1578,8 @@ $ages
  $ Day      : int  1 2 3 4 5 6 7 8 9 10 ...
  $ MonthName: Factor w/ 12 levels "Январь","Февраль",..: 5 5 5 5 5 5 5 5 5 5 ...</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb185"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb185-1"><a href=""></a><span class="co"># Посчитаем количество записей для каждого месяца</span></span>
-<span id="cb185-2"><a href=""></a><span class="fu">table</span>(df<span class="sc">$</span>MonthName)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb191"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb191-1"><a href=""></a><span class="co"># Посчитаем количество записей для каждого месяца</span></span>
+<span id="cb191-2"><a href=""></a><span class="fu">table</span>(df<span class="sc">$</span>MonthName)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
   Январь  Февраль     Март   Апрель      Май     Июнь 
@@ -1579,9 +1592,9 @@ $ages
 </div><div class="column" style="width:45%;">
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb187"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb187-1"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb187-2"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> df) <span class="sc">+</span></span>
-<span id="cb187-3"><a href=""></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> MonthName))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb193"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb193-1"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb193-2"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> df) <span class="sc">+</span></span>
+<span id="cb193-3"><a href=""></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> MonthName))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1667,7 +1680,7 @@ $ages
 (function() {
   var script = document.currentScript;
   var qrcode = script.previousElementSibling;
-  qrcode.qrcode = new QRCode(qrcode, {"width":"150","colorDark":"#22579a","height":"150","colorLight":"#ffffff","text":"https://vk.cc/cQYCB9"});
+  qrcode.qrcode = new QRCode(qrcode, {"height":"150","width":"150","text":"https://vk.cc/cQYCB9","colorDark":"#22579a","colorLight":"#ffffff"});
   script.remove();
 })();
 </script>
@@ -1689,7 +1702,7 @@ $ages
 (function() {
   var script = document.currentScript;
   var qrcode = script.previousElementSibling;
-  qrcode.qrcode = new QRCode(qrcode, {"width":"150","colorDark":"#22579a","height":"150","colorLight":"#ffffff","text":"https://vk.cc/cQYCDd"});
+  qrcode.qrcode = new QRCode(qrcode, {"height":"150","width":"150","text":"https://vk.cc/cQYCDd","colorDark":"#22579a","colorLight":"#ffffff"});
   script.remove();
 })();
 </script>
@@ -1704,7 +1717,7 @@ $ages
 <div>
 
 </div>
-<div class="quarto-layout-panel" style="padding-left: 1em; color: #fff" data-layout="[3,9]">
+<div class="quarto-layout-panel" data-layout="[3,9]" style="padding-left: 1em; color: #fff">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <div id="id=" "="" class="qrcode"></div>
@@ -1712,7 +1725,7 @@ $ages
 (function() {
   var script = document.currentScript;
   var qrcode = script.previousElementSibling;
-  qrcode.qrcode = new QRCode(qrcode, {"width":"150","colorDark":"#fff","height":"150","colorLight":"#447099","text":"https://t.me/+ZzzdU5ZvWuw4M2Ri"});
+  qrcode.qrcode = new QRCode(qrcode, {"height":"150","width":"150","text":"https://t.me/+ZzzdU5ZvWuw4M2Ri","colorDark":"#fff","colorLight":"#447099"});
   script.remove();
 })();
 </script>
@@ -1726,7 +1739,7 @@ $ages
 <div>
 
 </div>
-<div class="quarto-layout-panel" style="padding-left: 1em; color: #fff" data-layout="[3,9]">
+<div class="quarto-layout-panel" data-layout="[3,9]" style="padding-left: 1em; color: #fff">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <div id="id=" "="" class="qrcode"></div>
@@ -1734,7 +1747,7 @@ $ages
 (function() {
   var script = document.currentScript;
   var qrcode = script.previousElementSibling;
-  qrcode.qrcode = new QRCode(qrcode, {"width":"150","colorDark":"#fff","height":"150","colorLight":"#447099","text":"mailto:dt.science@post.smolgmu.ru"});
+  qrcode.qrcode = new QRCode(qrcode, {"height":"150","width":"150","text":"mailto:dt.science@post.smolgmu.ru","colorDark":"#fff","colorLight":"#447099"});
   script.remove();
 })();
 </script>
@@ -2198,7 +2211,7 @@ $ages
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});
+    <script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":false});
     (function() {
       let previousOnload = window.onload;
       window.onload = () => {
